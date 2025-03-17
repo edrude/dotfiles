@@ -1,0 +1,16 @@
+# This is Git's per-user configuration file.
+[user]
+  name = Ed Rude
+  email = erude1@umbc.edu
+[init]
+	defaultBranch = main
+[push]
+	autoSetupRemote = true
+[alias]
+	fpush = push --force-with-lease
+	recom = commit --amend --no-edit
+	recomfp = !git commit --amend --no-edit && git push --force-with-lease
+[credential "https://github.com"]
+	helper = !gh auth git-credential
+[credential "https://gist.github.com"]
+	helper = !gh auth git-credential
