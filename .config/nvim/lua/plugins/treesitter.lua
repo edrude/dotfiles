@@ -44,6 +44,7 @@ return {
         "markdown",
         "markdown_inline",
         "printf",
+        "puppet",
         "python",
         "query",
         "regex",
