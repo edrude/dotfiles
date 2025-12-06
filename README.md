@@ -11,12 +11,9 @@ Clone this repository into your home directory:
 ```bash
 git clone https://github.com/edrude/dotfiles.git ~/dotfiles
 ```
-
 ### 2. Install Stow
 
 If you don't already have [stow](https://www.gnu.org/software/stow/) installed, install it using your package manager:
-
-
 ### 3. Symlink the Dotfiles Using Stow
 
 Navigate to your `dotfiles` directory and use `stow` to create symlinks for the dotfiles:
@@ -27,13 +24,24 @@ stow .
 ```
 
 This will symlink almost all of the files to your home directory
-
 ### 4. Install Untracked Dependencies
+
 ```bash
 sh -c "$(wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
 git clone https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k
 ```
+## Other Tasks
 
+### Adopt a file from home directory to dotfiles git repository
+
+```bash
+# Ensure the path exists in dotfiles
+mkdir -p ~/dotfiles/.config/tmux
+# Move file to adopt into place under dotfiles
+mv ~/.config/tmux/tmux.conf ~/dotfiles/.config/tmux
+# Use stow to redeploy
+stow .
+```
 ### Uninstall
 
 To remove the symlinks, simply use `stow` with the `-D` flag:

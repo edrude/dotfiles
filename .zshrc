@@ -15,6 +15,9 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 PATH="~/bin:$PATH"
+export STOW_DIR="$HOME/dotfiles"
+export STOW_TARGET="$HOME"
+
 
 if command -v ~/bin/nvim &>/dev/null; then
   alias vim='~/bin/nvim'
