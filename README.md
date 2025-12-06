@@ -29,6 +29,7 @@ This will symlink almost all of the files to your home directory
 ```bash
 sh -c "$(wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
 git clone https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 ```
 ## Other Tasks
 
