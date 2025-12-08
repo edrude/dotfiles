@@ -37,7 +37,7 @@ sh -c "$(wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/ins
 git clone https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 ```
-## Other Tasks
+## Addendum
 
 ### Adopt a file from home directory to dotfiles git repository
 
@@ -59,3 +59,6 @@ stow -D .
 ```
 
 This will remove all the symlinks created earlier.
+
+### Stow Can Be "Overeager"
+I've noticed an issue where running `stow .` can link more than intended. For example, with my ~/.config/nvim directory: I only want to stow a few specific files there, but if I run `stow .` before ~/.config/nvim/ exists, Stow will happily link the entire directory instead of just the files I meant to manage.
