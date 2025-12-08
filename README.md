@@ -37,6 +37,15 @@ sh -c "$(wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/ins
 git clone https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 ```
+
+### 4. Import git signing key
+
+Pull "git-signing-key.asc" from secure storage, then import and delete file.
+```bash
+gpg --import git-signing-key.asc
+rm git-signing-key.asc
+```
+
 ## Addendum
 
 ### Adopt a file from home directory to dotfiles git repository
