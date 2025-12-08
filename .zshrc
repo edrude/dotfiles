@@ -19,8 +19,8 @@ export STOW_DIR="$HOME/dotfiles"
 export STOW_TARGET="$HOME"
 
 
-if command -v ~/bin/nvim &>/dev/null; then
-  alias vim='~/bin/nvim'
+if command -v nvim &>/dev/null; then
+  alias vim='nvim'
 fi
 
 alias bake='bundle exec rake'
