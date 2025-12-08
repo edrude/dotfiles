@@ -1,7 +1,8 @@
 # This is Git's per-user configuration file.
 [user]
   name = Ed Rude
-  email = erude1@umbc.edu
+  email = ed.rude@gmail.com
+	signingkey = 117DD31DB55F2F18
 [init]
 	defaultBranch = main
 [push]
@@ -14,3 +15,9 @@
 	helper = !gh auth git-credential
 [credential "https://gist.github.com"]
 	helper = !gh auth git-credential
+[commit]
+	gpgsign = true
+[tag]
+	gpgsign = true
+[gpg]
+	program = gpg
