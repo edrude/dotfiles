@@ -22,6 +22,7 @@ git clone https://github.com/edrude/dotfiles.git ~/dotfiles
 Navigate to your `dotfiles` directory and use `stow` to create symlinks for the dotfiles:
 
 ```bash
+find . -mindepth 1 -type d -not -path './.git*' -print0 | xargs -0 -I{} mkdir -p "$HOME/{}" # Make sure we link the minimum
 cd ~/dotfiles
 stow .
 ```
@@ -35,7 +36,7 @@ sh -c "$(wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/ins
 
 ```bash
 git clone https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k
-git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+git clone https://github.com/tmux-plugins/tpm ~/.config/tmux/plugins/tpm
 ```
 
 ### 4. Import git signing key
